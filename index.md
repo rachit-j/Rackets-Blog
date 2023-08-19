@@ -3,13 +3,41 @@ layout: default
 title: Student Blog
 ---
 
-## Luna's Page
+## Rachit's Page
 
-Go to my [Github account](https://github.com/lunaiwa) !!
+Why is the world round? Why are we human? Why do we like food? These are all questions that we do not currently have an answer to. However, this page will seek to answer that.
 
-## Overview of Hacks, Study and Tangibles
-Blogging in GitHub pages is a way to learn and code at the same time. 
+<div style="text-align: center;">   
+    <img src="images/malai_kofta.jpeg" alt="drawing" width="200"/>
+    
+    
+</div>
 
-- Plans, Lists, [Scrum Boards](https://clickup.com/blog/scrum-board/) help you to track key events, show progress and record time.  Effort is a big part of your class grade.  Show plans and time spent!
-- [Hacks(Todo)](https://levelup.gitconnected.com/six-ultimate-daily-hacks-for-every-programmer-60f5f10feae) enable you to stay in focus with key requirements of the class.  Each Hack will produce Tangibles.
-- Tangibles or [Tangible Artifacts](https://en.wikipedia.org/wiki/Artifact_(software_development)) are things you accumulate as a learner and coder. 
+ADD FREEFORM PICTURE!!!!!!!!!!!!!!
+
+## Some of my interests!
+
+1. The Legend of Zelda: Tears of the Kingdom! [Trailer here](https://www.youtube.com/watch?v=uHGShqcAHlQ&pp=ygUMdG90ayB0cmFpbGVy)
+2. Tennis! [UTR](https://app.universaltennis.com/profiles/1320939)
+3. Mountain Biking! [Strava](https://www.strava.com/athletes/59848940)
+
+## My Schedule
+<table>
+  <tr>
+    <td>Class Name</td>
+    <td>AP Statistics</td>
+    <td>AP English Language</td>
+    <td>AP Computer Science A</td>
+    <td>US History</td>
+    <td>AP Physics C: Mechanics</td>
+  </tr>
+  <tr>
+    <td>Rating /5</td>
+    <td>4</td>
+    <td>3.5</td>
+    <td>5</td>
+    <td>3.5</td>
+    <td>4</td>
+  </tr>
+</table>
+
