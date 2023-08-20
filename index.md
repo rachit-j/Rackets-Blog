@@ -5,15 +5,19 @@ title: Student Blog
 
 ## Rachit's Page
 
-Why is the world round? Why are we human? Why do we like food? These are all questions that we do not currently have an answer to. However, this page will seek to answer that.
+Why is the world round? Why are we human? Why do we like food? These are all questions that we do not currently have an answer to. However, I am not here to answer those questions!
+
+## About me!
+<div style="text-align: center;">   
+    <img src="images/freeform.png" alt="drawing" width="700"/>
+</div>
+
+## My Favorite Food!
 
 <div style="text-align: center;">   
     <img src="images/malai_kofta.jpeg" alt="drawing" width="200"/>
-    
-    
 </div>
 
-ADD FREEFORM PICTURE!!!!!!!!!!!!!!
 
 ## Some of my interests!
 
