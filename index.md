@@ -45,3 +45,17 @@ Why is the world round? Why are we human? Why do we like food? These are all que
   </tr>
 </table>
 
+<style>
+    .invert {
+        filter: invert(100%);
+    }
+</style>
+
+<a href="#" id="invertButton">Invert Colors</a>
+
+<script>
+document.getElementById('invertButton').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.body.classList.toggle('invert');
+});
+</script>
