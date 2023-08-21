@@ -29,16 +29,16 @@ Why is the world round? Why are we human? Why do we like food? These are all que
 <table>
   <tr>
     <td>Class Name</td>
-    <td>AP Statistics</td>
-    <td>AP English Language</td>
+    <td>AP Physics</td>
+    <td>AP Stats</td>
     <td>AP Computer Science A</td>
-    <td>US History</td>
-    <td>AP Physics C: Mechanics</td>
+    <td>AP English Language</td>
+    <td>Off Roll</td>
   </tr>
   <tr>
     <td>Rating /5</td>
     <td>4</td>
-    <td>3.5</td>
+    <td>4</td>
     <td>5</td>
     <td>3.5</td>
     <td>4</td>
