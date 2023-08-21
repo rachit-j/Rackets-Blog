@@ -2,8 +2,8 @@
 title: Blogs
 ---
 
-# Some cool platformer game
-
+# The Sleepy Platformer
+Warning: Sleepy after activity
 
 
 <body>
@@ -108,7 +108,7 @@ title: Blogs
         const platforms = [
             { x: 200, y: 300, width: 100, height: 10, color: 'green' },
             { x: 400, y: 200, width: 150, height: 10, color: 'green' },
-            { x: 600, y: 400, width: 80, height: 10, color: 'green' }
+            { x: 500, y: 200, width: 10, height: 200, color: 'green' }
         ];
 
         function drawPlatforms() {
