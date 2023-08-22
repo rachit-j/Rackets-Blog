@@ -3,12 +3,13 @@ toc: true
 comments: true
 layout: post
 title: Linux Shell and Bash
-description: The complete Hack of the section Linux Shell and Bash. This page has the Link to 
+description: The complete Hack of the section Linux Shell and Bash. This page is also saved in a jupyter notebook.
 type: plans
 courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0} }
 categories: [C1.4]
 ---
-
+### Jupyter Notebook
+To access the notebook, click [here]()
 ### Hack #1: Tool Script
 This is the script I have created that will check if all the prerequisites from the [Tools and Equipment Overview](https://nighthawkcoders.github.io/teacher//c4.3/c5.0/2023/08/16/Tools_Equipment.html) have been fullfilled for a MacOS System.
 ```bash
@@ -93,6 +94,26 @@ rachitjaiswal@Rachits-MBP# md5sum Desktop/yomp.gif
 bc75b5ce8a75c1f4c7ed1e51b113353b  Desktop/yomp.gif
 rachitjaiswal@Rachits-MBP#
 ```
-This can be verified if you download the <a href="/images/Yomp.gif" download>
-  <img src="/images/Yomp.gif" alt="gif file">
-</a> and check for yourself. Even if the .gif is on a completely different architecture, the file will still have the same md5 sum, and if it is tampered with or malformed, the sum will change. Try for yourself!
+This can be verified if you download the gif and check for yourself. Even if the .gif is on a completely different architecture, the file will still have the same md5 sum, and if it is tampered with or malformed, the sum will change. Using something like this on an .exe or a .pkg file ensures that the package is valid and that it comes from the source, without being tampered or malformed.
+
+### Updating a Repository with the command line
+To update a git repository with your command line, you must follow the steps below.
+
+```bash
+# 1. Open a terminal and navigate to the directory of your github repository on your localhost
+# 2. Use the following command to add a repository.
+
+git add .
+
+# 3. To verify the status of the repository, run the following command
+
+git status
+
+# 4. To commit after making a change, type in the following command
+
+git commit -m 'your message here'
+
+# 5. To push, type in the following command
+
+git push
+```
