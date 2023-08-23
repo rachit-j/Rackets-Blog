@@ -16,6 +16,7 @@ This is the script I have created that will check if all the prerequisites from 
 #!/bin/bash
 echo "Starting the Tools and Equipment Overview Confirmation Script..."
 
+echo "Checking Homebrew..."
 if which brew | grep -q "not found"; then
     echo "Homebrew not installed! Install Homebrew to complete the script!"
     exit 1
