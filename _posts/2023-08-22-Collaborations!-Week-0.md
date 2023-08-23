@@ -16,7 +16,7 @@ Grace and I collaborated on a multitude of problems, some of which include
 - A problem with Java not showing up in my Jupyter Notebook
 - A problem with Grace's website where all her hard work and styles suddenly dissapeared
 - A problem with my tables that did not allow me to use the pipe function to let me make tables
-- A problem with Grace's laptop not being able to install the tools
+- A problem where Grace did not know how to display the images in her blog
 - A problem with me not understanding how to make a post
 - A problem where Grace accidentally forgot to update her website configuration
 - A problem where my images kept on getting deleted
