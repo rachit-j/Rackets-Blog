@@ -22,6 +22,6 @@ Grace and I collaborated on a multitude of problems, some of which include
 - A problem where my images kept on getting deleted
 
 Grace and I collaborated over FaceTime at home so that we could help each other out with our issues. Here is a pic of us on FaceTime!
-<img src="/images/graceandi.png" alt="A rare moment of a wild Grace being productive">
+<img src="/Rackets-Blog/images/collab.jpeg" alt="A rare moment of a wild Grace being productive" width="300">
 
 Grace also helped me draw my [freeform pic](/Rackets-Blog/) (and tell me how to draw)
