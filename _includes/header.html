@@ -2,7 +2,7 @@
     <head>
     <style>
     .nav {
-      background-color: greenyellow; 
+      background-color: #2E86C1; 
       list-style-type: none;
       text-align: center;
       margin: 0;
@@ -14,21 +14,27 @@
       font-size: 20px;
       padding: 20px;
     }
+    .button {
+      border: none;
+      color: #2C3E50;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .button1 {background-color: #2C3E50;} /* Green */
     </style>
     </head>
 
   <div id="header">
     <nav>
       <ul class="nav">
-        <li class="fork">
-          <a href="{{site.baseurl}}/">Home</a>
-        </li>
-        
-        <li class="fork"><a href="{{site.baseurl}}/blogs">Blogs</a></li>
-        <li class="title"><a href="{{ site.github.repository_url }}#readme">View On GitHub</a></li>
-        <li class="fork"><a href="{{site.baseurl}}/game">Game</a></li>
-        <li class="fork"><a href="{{site.baseurl}}/calculator">Calculator</a></li>
-        <li class="fork"><a href="{{site.baseurl}}/lbbook">Lab Notebook</a></li>
+        <button class="button button1" style="border-radius: 4px;"><li class="fork" style="color:#36AE7C;"><a href="{{site.baseurl}}/">Home</a></li></button>
+        <button class="button button1" style="border-radius: 4px;"><li class="fork"><a href="{{site.baseurl}}/blogs">Blogs</a></li></button>
+        <button class="button button1" style="border-radius: 4px;"><li class="title"><a href="{{ site.github.repository_url }}#readme">View On GitHub</a></li></button>
+        <button class="button button1" style="border-radius: 4px;"><li class="fork"><a href="{{site.baseurl}}/game">Game</a></li></button>
+        <button class="button button1" style="border-radius: 4px;"><li class="fork"><a href="{{site.baseurl}}/calculator">Calculator</a></li></button>
+        <button class="button button1" style="border-radius: 4px;"><li class="fork"><a href="{{site.baseurl}}/lbbook">Lab Notebook</a></li></button>
       </ul>
     </nav>
   </div><!-- end header -->
