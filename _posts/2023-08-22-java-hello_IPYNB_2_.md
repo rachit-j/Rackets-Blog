@@ -117,18 +117,6 @@ Lets Say I wanted to dynamically change something. All I would have to do is cha
 
 
 ```Java
-denver.getstate();
-```
-
-
-
-
-    California
-
-
-
-
-```Java
 denver.setstate("California")
 ```
 
