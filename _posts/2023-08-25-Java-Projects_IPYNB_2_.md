@@ -4,8 +4,8 @@ comments: True
 layout: post
 title: Java Projects
 description: The complete Hack of the section Linux Shell and Bash. This page is also saved in a jupyter notebook.
-type: plans
-courses: {'csse': {'week': 1}, 'csp': {'week': 1, 'categories': ['4.A']}, 'csa': {'week': 0}}
+type: hacks
+courses: {'csse': {'week': 1}, 'csp': {'week': 1, 'categories': ['4.A']}, 'csa': {'week': 0}, 'labnotebook': {'week': 1}}
 categories: ['C1.4']
 ---
 
@@ -16,7 +16,7 @@ Here is some code for some console games in Java
 By modifying the logic of the games and splitting them into different classes, it is a lot easer to make edits to them and simplify them, as well as create a new game and simply add it to the menu. Take a look at the following games. 
 
 
-```Java
+```java
 public class HigherOrLower { // Unit 5
     public static void main(String[] args) { // Unit 9
         System.out.println("Higher or Lower");
@@ -46,36 +46,24 @@ public class HigherOrLower { // Unit 5
 ```
 
 
-```Java
+```java
 HigherOrLower.main(null) // Unit 4
 ```
 
     Higher or Lower
     You have three guesses to guess the number I am thinking of between 1-8.
     If you guess the number correctly, you win!
-
-
      5
-
-
     The number is higher
-
-
      7
-
-
     The number is higher
-
-
      8
-
-
     You win!
     Game over.
 
 
 
-```Java
+```java
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -154,31 +142,19 @@ TheLegendOfZelda.main(null); // Unit 4
     1 - Break through to the path to Hateno
     2 - Fight the pig (without your pizza)
     3 - Run inside a house and hide like a coward
-
-
      3
-
-
     Good job coward! The pig does not see you, and after killing all the inhabitants, goes away to feast on another village. Weakling.
     You immediatley head towards Hateno, but you get stuck in a ditch. Do you 1) climb an old rope 2) dig a hole 3) Scream and pray to the gods for help
-
-
      2
-
-
     You successfuly dig a hole and find an underground stream. You hop into it and it carries you right under Hateno. When you get off the dock, there are two doors for you to pass through to get your legendary pizza, and a trapdoor to exit. Which do you choose? 1 - Door 1, 2 - Door 2, 3 - Trapdoor
-
-
      3
-
-
     After cowardly exiting, you head over to the pizza shop, where the owner cooks a new batch of Legendary Pizza. When the monster pig arrives, you easily defeat it after eating the pizza. Well done!
     Link is Full
     Game over!
 
 
 
-```Java
+```java
 public class RockPaperScissors{ // Unit 5
     public static void main(String[] args) { // Unit 9
             System.out.println("Rock Paper Scissors");
@@ -237,24 +213,20 @@ public class RockPaperScissors{ // Unit 5
 ```
 
 
-```Java
+```java
 RockPaperScissors.main(null)// Unit 4
 ```
 
     Rock Paper Scissors
     Type r for rock, p for paper, or s for scissors
-
-
      p
-
-
     You chose paper 
     The computer chose rock 
     You win!
 
 
 
-```Java
+```java
 import java.util.Scanner;
 
 public class ConsoleGame {
@@ -351,35 +323,19 @@ ConsoleGame.main(null); // Unit 2/4
     | 3 - Rock Paper Scissors            |
     +------------------------------------+
     [0m
-
-
      1
-
-
     [34m1: [0mYour name is Link! You are on a quest to get the legendary Pizza
     Right now, you are in Kakariko village. To get the Pizza, you have to travel to Hateno Village. However, there are many monsters in your way.
     Suddenly, a giant pig attacks the village! What would you like to do?
     1 - Break through to the path to Hateno
     2 - Fight the pig (without your pizza)
     3 - Run inside a house and hide like a coward
-
-
      3
-
-
     Good job coward! The pig does not see you, and after killing all the inhabitants, goes away to feast on another village. Weakling.
     You immediatley head towards Hateno, but you get stuck in a ditch. Do you 1) climb an old rope 2) dig a hole 3) Scream and pray to the gods for help
-
-
      2
-
-
     You successfuly dig a hole and find an underground stream. You hop into it and it carries you right under Hateno. When you get off the dock, there are two doors for you to pass through to get your legendary pizza, and a trapdoor to exit. Which do you choose? 1 - Door 1, 2 - Door 2, 3 - Trapdoor
-
-
      3
-
-
     After cowardly exiting, you head over to the pizza shop, where the owner cooks a new batch of Legendary Pizza. When the monster pig arrives, you easily defeat it after eating the pizza. Well done!
     Game over!
     [0m
@@ -393,31 +349,15 @@ ConsoleGame.main(null); // Unit 2/4
     | 3 - Rock Paper Scissors            |
     +------------------------------------+
     [0m
-
-
      2
-
-
     [34m2: [0mHigher or Lower
     You have three guesses to guess the number I am thinking of between 1-8.
     If you guess the number correctly, you win!
-
-
      5
-
-
     The number is lower
-
-
      3
-
-
     The number is lower
-
-
      2
-
-
     You win!
     Game over.
     [0m
@@ -431,18 +371,10 @@ ConsoleGame.main(null); // Unit 2/4
     | 3 - Rock Paper Scissors            |
     +------------------------------------+
     [0m
-
-
      3
-
-
     [34m3: [0mRock Paper Scissors
     Type r for rock, p for paper, or s for scissors
-
-
      s
-
-
     You chose scissors 
     The computer chose rock 
     You lose!
@@ -457,11 +389,7 @@ ConsoleGame.main(null); // Unit 2/4
     | 3 - Rock Paper Scissors            |
     +------------------------------------+
     [0m
-
-
      0
-
-
     [34m0: [0m[34mGoodbye, World![0m[0m
 
 

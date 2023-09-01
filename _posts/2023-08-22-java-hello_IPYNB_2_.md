@@ -4,8 +4,8 @@ comments: True
 layout: post
 title: Java Hello
 description: The complete Hack of the section Java. This page is also saved in a jupyter notebook.
-type: plans
-courses: {'csse': {'week': 1}, 'csp': {'week': 1, 'categories': ['4.A']}, 'csa': {'week': 0}}
+type: hacks
+courses: {'csse': {'week': 1}, 'csp': {'week': 1, 'categories': ['4.A']}, 'csa': {'week': 0}, 'labnotebook': {'week': 1}}
 categories: ['C1.4']
 ---
 
@@ -21,7 +21,7 @@ categories: ['C1.4']
 The following code aims to create a class to record major cities, their prominent zip code, and their state. The class can be modified and data can be recieved. For the criteria of the hack, the comments and the following explanations will go through the CollegeBoard Criteria. 
 
 
-```Java
+```java
 // Define a class
 public class CityInfo {
     private String name;
@@ -99,7 +99,7 @@ public class CityInfo {
 Essentially, we do the same thing as the above but we make it simpler and easier to demonstrate
 
 
-```Java
+```java
 CityInfo.main(null);
 ```
 
@@ -116,12 +116,12 @@ CityInfo.main(null);
 Lets Say I wanted to dynamically change something. All I would have to do is change the value of the item!
 
 
-```Java
+```java
 denver.setstate("California")
 ```
 
 
-```Java
+```java
 denver.getstate();
 ```
 

@@ -11,8 +11,14 @@ Setup course data
 {% assign course = site.data[page.course] %} <!-- Load YML data -->
 {% assign units = page.units | split: ',' %}
 <h1>{{page.title}}</h1>
+<h2><span style="background: -webkit-linear-gradient(left, red , yellow); -webkit-background-clip: text; color: transparent;">
+  Rachit Jaiswal's Lab Notebook!
+  </span>
+</h2>
+<div style="background-color: #f3f3f3; border-radius: 13px; padding: 3px;">
+  <div style="background-color: #4caf50; width: 5.56%; height: 10px; border-radius: 10px;"></div>
+</div>
 <br>
-
 {%comment%} 
 Load all posts with site
 {%endcomment%}
@@ -41,10 +47,10 @@ Load all posts with site
 
 <table>
   <tr>
-    <th>Week</th>
-    <th>Plans</th>
-    <th>Hacks(Todo)</th>
-    <th>Tangibles</th>
+    <th><span style="color:Orange">Week</span></th>
+    <th><span style="color:#85C1E9">Plans</span></th>
+    <th><span style="color:#2ECC71">Hacks</span></th>
+    <th><span style="color:red">Tangibles</span></th>
   </tr>
 
   {%comment%} 

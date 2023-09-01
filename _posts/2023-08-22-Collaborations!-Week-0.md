@@ -3,9 +3,9 @@ toc: false
 comments: true
 layout: post
 title: Collaborations! - Week 0
-description: Build your first Blog.  This will help us communicate results.
-type: plans
-courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0} }
+description: Collaborations for week 0
+type: tangibles
+courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0}, labnotebook: {week: 0} }
 categories: [C1.4]
 ---
 

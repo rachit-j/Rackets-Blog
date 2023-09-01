@@ -4,7 +4,7 @@ layout: post
 title: Linux Shell and Bash
 description: The complete Hack of the section Linux Shell and Bash. This page is also saved in a jupyter notebook.
 type: hacks
-courses: {'csse': {'week': 1}, 'csp': {'week': 1}, 'csa': {'week': 0}}
+courses: {'csse': {'week': 1}, 'csp': {'week': 1}, 'csa': {'week': 0}, 'labnotebook': {'week': 1}}
 categories: ['C4.1']
 ---
 

@@ -4,8 +4,8 @@ comments: true
 layout: post
 title: Terminal Commands
 description: A comprehensive list of basic terminal Commands
-type: plans
-courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0} }
+type: hacks
+courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0}, labnotebook: {week: 0} }
 categories: [C1.4]
 ---
 
