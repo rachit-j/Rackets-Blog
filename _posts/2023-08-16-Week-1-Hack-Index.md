@@ -4,7 +4,7 @@ comments: true
 layout: post
 title: Week 1 Hack Index
 description: The Hack Index for Week 1
-courses: { csse: {week: 0}, csp: {week: 0}, csa: {week: 0} }
+courses: { csse: {week: 0}, csp: {week: 0}, csa: {week: 0}, labnotebook: {week: 1} }
 type: hacks
 ---
 
