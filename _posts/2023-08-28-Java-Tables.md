@@ -4,8 +4,8 @@ comments: true
 layout: post
 title: Java Tables
 description: This is a collection of data that I have ammassed on topics that I feel familiar with.
-type: plans
-courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0} }
+type: hacks
+courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0}, labnotebook: {week: 2} }
 categories: [C1.4]
 ---
 
