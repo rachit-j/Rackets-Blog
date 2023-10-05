@@ -1,6 +1,18 @@
 ---
-
+toc: True
+comments: True
+layout: post
+title: Y2K Coders FRQ
+description: Y2K Coders Part 2
+type: hacks
+courses: {'csse': {'week': 1}, 'csp': {'week': 1, 'categories': ['4.A']}, 'csa': {'week': 0}, 'labnotebook': {'week': 7}}
+categories: ['C1.4']
 ---
+
+# FRQ: The Mystic Library
+
+In the ancient city of Codeville, there's a mystic library that holds books of power. Each book has a unique energy level represented by an int. The library has a special pedestal that can hold two books at a time. When two books are placed on it, their combined energy is evaluated, and a magical event occurs.
+
 
 ```Java
 public class MysticLibrary {
