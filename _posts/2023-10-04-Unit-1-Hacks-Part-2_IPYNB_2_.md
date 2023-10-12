@@ -14,7 +14,7 @@ categories: ['C1.4']
 In the ancient city of Codeville, there's a mystic library that holds books of power. Each book has a unique energy level represented by an int. The library has a special pedestal that can hold two books at a time. When two books are placed on it, their combined energy is evaluated, and a magical event occurs.
 
 
-```Java
+```java
 public class MysticLibrary {
     int book1Energy = 0;
     int book2Energy = 0;
@@ -29,7 +29,7 @@ public class MysticLibrary {
 Write a method evaluateEnergy that calculates the combined energy of the two books. If the combined energy exceeds a threshold of 100, an event is triggered.
 
 
-```Java
+```java
 public class MysticLibrary {
     int book1Energy = 0;
     int book2Energy = 0;
@@ -53,7 +53,7 @@ The evaluateEnergy method calculates the total energy when both books are placed
 Sometimes, to balance the energies, the librarian transfers energy from one book to another. Write a method transferEnergy that transfers a specified amount of energy from book1 to book2.
 
 
-```Java
+```java
 public class MysticLibrary {
     
     int book1Energy = 0;
