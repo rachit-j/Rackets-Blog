@@ -817,6 +817,8 @@ RectangleOperations.main(null);
     Perimeter: 30.0
 
 
+
+
 ## 5.9 this Keyword
 
 ## KEY LEARNING OBJECTIVE
@@ -839,6 +841,8 @@ public class MyClass {
 
 QUESTION: **How can you use 'this' to call a constructor?**
 
+You can call the constructor by saying this.(constructor) and then making a new instance, and then after, doing (constructorname).(function);
+
 ## 5.10 Ethical and Social Implications of Computing Systems
 
 # KEY LEARNING OBJECTIVE
@@ -847,14 +851,14 @@ Explain the ethical and social implications of computing systems.
 
 **Components of Ethical Implications**:
 
-1. Legal issues and intellectual _____ are big concerns in program creation. Licensing open source software is a big issue, as it dictates how programmers need to comply with terms and how software can be distributed and used.
+1. Legal issues and intellectual property are big concerns in program creation. Licensing open source software is a big issue, as it dictates how programmers need to comply with terms and how software can be distributed and used.
 
 
 2. Data privacy is also a big issue. There are many data protection laws that programmers need to ensure that their code complies with, especially if their program works with data collection and processing.
 
 **Components of Social Implications**:
 
-1. There can be harmful impacts from software - malicious software can pose significant _______ _________.
+1. There can be harmful impacts from software - malicious software can pose significant security threats.
 
 
 2. Software has transformed how people communicate, access information, and interact with each other. Social media platforms, for example, have changed the way society discusses issues, while algorithms can create filter bubbles that limit exposure to diverse opinions.
@@ -862,3 +866,5 @@ Explain the ethical and social implications of computing systems.
 **POPCORN HACKS: (0.2)**
 
 **Write a two sentence reflection on the social and ethical implications of programming. (0.8)**
+
+Programming holds many significant social and ethical implications, as it shapes our digital world. Programmers need to consider the consequences of their code on privacy, security, and public society, emphasizing the importance of ethics  in tech.

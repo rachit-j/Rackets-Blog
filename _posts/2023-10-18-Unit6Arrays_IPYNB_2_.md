@@ -348,7 +348,7 @@ class Quote {
         int j = 0;
         for (String quote :  quotes) {
             System.out.println("Quote: \"" + i + "\"");
-            System.out.println("Emotion: " + emotions.get(j));
+            System.out.println("Emotion: " + emotions.get(j)); // You cannot do an enhanced for loop with two variables of different sets. That does not work, as the for loop cannot increment both at the same time. Therefore, we have to use a hybrid or a regular loop. I have used a hybrid one here. 
             System.out.println("---------------------------");
             j++;
         }
@@ -387,6 +387,8 @@ Quote.main(null);
 
 
 What are some of the benefits of using an enhanced for loop in this case versus a regular for loop?
+
+The enhanced for loop simplifies the logic and ensures that there are no index out of bound errors here, while we can also set it to automatically increment the other variable for the other list, and since that is the same size, we also do not have to worry about index errors for that list as well. 
 
 ## Limitations to enhanced for loop
 - it does not provide access to the index of the current element.
@@ -581,11 +583,46 @@ How would we code a left shift? Write a left shift using the variables below
 
 
 ```Java
-String [] words = {"alpha", "beta", "gamma", "delta"};
-int shiftWord = 2;
+// Doing it properly ahem WITH spacing and comments
+public static void leftShiftArray(String[] arr, int shiftWord) {
+    int length = arr.length;
+    
+    // Ensure shiftWord is within the array length to avoid unnecessary iterations
+    shiftWord %= length;
+    
+    // Create a new array to store the shifted elements
+    String[] shiftedArr = new String[length];
+    
+    for (int i = 0; i < length; i++) {
+        // Calculate the new index after left shifting
+        int newIndex = (i - shiftWord + length) % length;
+        
+        // Copy the element from the original array to the shifted array
+        shiftedArr[newIndex] = arr[i];
+    }
+    
+    // Copy the shifted array back to the original array
+    System.arraycopy(shiftedArr, 0, arr, 0, length);
+}
+
+public static void main(String[] args) {
+    String[] words = {"alpha", "beta", "gamma", "delta"};
+    int shiftWord = 2;
+
+    leftShiftArray(words, shiftWord);
+
+    // Print the shifted array
+    for (String word : words) {
+        System.out.print(word + " ");
+    }
+}
+
+main(null);
 ```
 
-**Why should the array index be wrapped in a call to Math.abs?**
+    gamma delta alpha beta 
+
+**Why should the array index be wrapped in a call to Math.abs?** As we are shifting, we may have to shift things back and forth, which changes our index from positive to negative, and although they are referencing the same point, we cannot have negative indexes, so we absolute value them.
 
 # Hacks
 
@@ -709,6 +746,20 @@ public class PrimeNumbers {
 PrimeNumbers.main(null)
 ```
 
+    Prime numbers in the array:
+    2
+    3
+    5
+    7
+    11
+    13
+    17
+    19
+    23
+    29
+    31
+
+
 ### 6.2 HACK 2 MCQ (<5 min)
 
 **Multiple Choice Questions**
@@ -729,12 +780,14 @@ for (int i = 0; i < list.length; i++)
 
 - A. red-yellow-blue
 - B. 3-3-3-
-- C. 3-6-4-
+- C. 3-6-4- THIS ANSWER
 - D. 3-6-
 - E. 3-6-4
 
 Write why you chose that answer! 
 ______________________
+
+Its just the length of each word in the list followed by a dash... string lessons.
 
 2. The code below is meant to display every other number in the list numbers. Which of the following should replace the missing code in order to do this? 
 
@@ -751,10 +804,12 @@ for(/*missing code*/)
 - B. int i = 1; i < numbers.length; i++
 - C. int i = 1; i < numbers.length; i+=2
 - D. int i = 0; i < numbers.length; i++
-- E. int i = 0; i < numbers.length; i+=2
+- E. int i = 0; i < numbers.length; i+=2 THIS ONE
 
 Write why you chose that answer! 
 ______________________
+
+Basically, you are looking for i = 0 (initial start), i < length (length of the actual list), and i+=2 (increment by 2). The only option that satisfies those requirements is E.
 
 3. (This one is a little hard) Which of the following would fix the code so that the elements in arr are reversed. Hint: try creating a list in your head and trace the code to see if the code accomplishes its goal.
 
@@ -772,12 +827,14 @@ public static void reverseArray(double [] arr)
 ```
 
 - A. Change loop condition to: i < arr.length - 1
-- B. Change loop condition to: i < arr.length/2
+- B. Change loop condition to: i < arr.length/2 THIS ONE
 - C. Change loop condition to: i < arr.length/2 - 1
 
 In case you are having trouble with question 3 the answer is B. Write about why! 
 
 _______________________________
+
+What the function does is that it swapps the first term with the last term, the second term with the second to last term and so on. /2 -1 wont work because you would skip the middle term(s), and if you repeat it the point of the function wil be lost. Therefore, the only option is the second one, where it does the correct amount of iterations.
 
 ### 6.3 HACK 
 - Just finish the popcorn hacks throughout the lesson! 

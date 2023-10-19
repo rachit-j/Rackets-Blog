@@ -159,7 +159,7 @@ PersonConstructorDemo.main(null);
 
 In the Person class, the hobbies list is encapsulated to prevent unintended modifications. What is the importance of encapsulation and how does it improve the design of the class?
 
-**
+It makes sure that the list cannot be damaged and it forces the program to make a copy of the list so that the original list is not changed, but can still be referenced for duplication to make other instances of objects. 
 
 # 5.3 Documentation with Comments
 
