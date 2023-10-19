@@ -23,7 +23,7 @@ Question: What is a loop and what are some real life examples of this (Setting a
 You know the <code>i</code> variable that you use for while/for loops? It actually has a name, loop control variable
 
 
-```Java
+```java
 int i = 0; // initialize loop control variable
 while (i < 10)  // checks the loop control variable
 {
@@ -45,7 +45,7 @@ while (i < 10)  // checks the loop control variable
 
 
 
-```Java
+```java
 // Popcorn Hack: Simplify the code segment below
 int i = 0;
 System.out.println(i);
@@ -88,7 +88,7 @@ while (i <= 4)  // checks the loop control variable
 
 
 
-```Java
+```java
 int i = 0;
 while (i < 5) { System.out.println(i);
 i++;
@@ -108,7 +108,7 @@ An infinite loop is when a while loop always evaluates to true. avoid this when 
 **What's wrong with this code block?**
 
 
-```Java
+```java
 while (true)
 {
     System.out.print("CONTROL ");
@@ -121,7 +121,7 @@ while (true)
 **What will this code block output?**
 
 
-```Java
+```java
 // Quite shrimple
 int i = 0;
 do 
@@ -140,7 +140,7 @@ In a do while loop, it will run the "do" once before it reaches the "while", and
 this is the standard structure of a for loop
 
 
-```Java
+```java
 for (initialization; Boolean expression; update)
 {
     System.out.println("Doing some code");
@@ -152,7 +152,7 @@ Initialization will run at the start of the loop, boolean expression will get ch
 **How many times will this code print "Doing some code?"**
 
 
-```Java
+```java
 for (int num = 1; num <= 5; num++)
 {
     System.out.println("Doing some code");
@@ -172,7 +172,7 @@ In this code, it creates the variable *num* at the start of the loop, it checks 
 this is essentially a javascript for loop, as it will iterate through a list and run code in the loop to each variable inside the list
 
 
-```Java
+```java
 int[] list = {1, 4, 6, 2};
 for (int j : list)
 {
@@ -192,7 +192,7 @@ Breaks, as you likely already know, end a loop. They tend to be used with an *if
 **How many times will this code print "Big guy?"**
 
 
-```Java
+```java
 int i = 0; 
 while (i < 10) 
 {
@@ -215,7 +215,7 @@ while (i < 10)
 Continue will skip code for an iteration, but will still keep the loop running
 
 
-```Java
+```java
 int i = 0; 
 while (i < 10) 
 {
@@ -250,7 +250,7 @@ while (i < 10)
 - String.length - Returns the length of a String
 
 
-```Java
+```java
 public class Compare {
     public static void main(String[] args) {
         String string1 = "Coding is cool!";
@@ -290,7 +290,7 @@ Compare.main(null)
 The three methods are the substring, the equals, and the length. This contributes to the program's functionality by allowing us to manipulate the strings in the ways we want.
 
 
-```Java
+```java
 String word = "supercalifragilisticexpialidocious";
 int count = 0;
 
@@ -315,7 +315,7 @@ Word.legnth stops us from getting an index out of bounds error if our loop tries
 The OR operator is used
 
 
-```Java
+```java
 public class Main {
     public static void main(String[] args) {
         String word = "Scooby Doo";
@@ -345,7 +345,7 @@ Main.main(null)
 String concatenation is when you want to add to strings together
 
 
-```Java
+```java
 String original = "String";
 String reversed = "";
 for (int i = 0; i < original.length(); i++)
@@ -381,7 +381,7 @@ Essential Knowledge:
 1 2
 
 
-```Java
+```java
 public class NestedLoops{
 
     public static void main(String[] args){
@@ -427,7 +427,7 @@ Essential Knowledge:
 
 
 
-```Java
+```java
 for (int outer = 0; outer < 3; outer++){
     for (int inner = 0; inner < 4; inner++){
         // statement #1
@@ -445,7 +445,7 @@ for (int outer = 0; outer < 3; outer++){
 
 
 
-```Java
+```java
 // Testing to see if im right
 
 int i = 0;
@@ -461,7 +461,7 @@ System.out.println(i)
 
 
 
-```Java
+```java
 for (int outer = 5; outer > 0; outer--){
     for (int inner = 0; inner < outer; inner++){
         // statement #1
@@ -478,7 +478,7 @@ for (int outer = 5; outer > 0; outer--){
 **In the code above, how many times will the inner loop execute in total?** 15
 
 
-```Java
+```java
 int k = 0;
 while (k < 5){
     int x = (int)(Math.random()*6) + 1;
@@ -494,7 +494,7 @@ while (k < 5){
 **In the code above, how many times will the statement #1 execute?** 26
 
 
-```Java
+```java
 for (int k = 0; k < 135; k += 5) {
     System.out.print(k);
 }
@@ -519,7 +519,7 @@ These hacks will be due on Monday (October 16th) before class
 
 
 
-```Java
+```java
 for (int k = 0; k < 40; k++){
     if (k % 4 == 0){
         System.out.println(k); 
@@ -544,7 +544,7 @@ Rewrite the code above 3 different times
 - Your code should use 3 different types of loops that you learned above (Hint: You may need to use a list)
 
 
-```Java
+```java
 // 1st way
 Integer[] edwiiin = {0, 4, 8, 12, 16, 20, 24, 28, 32, 36};
 
@@ -566,7 +566,7 @@ for(i = 0; i < edwiiin.length; i++) {
 
 
 
-```Java
+```java
 // 2nd way
 for(i = 0; i < 40; i = i + 4) {
     System.out.println(i);
@@ -586,7 +586,7 @@ for(i = 0; i < 40; i = i + 4) {
 
 
 
-```Java
+```java
 // 3rd way
 int i = 0;
 while(i < 40) {
@@ -611,7 +611,7 @@ while(i < 40) {
 Try to write a cipher program that shifts each letter in a message 3 letters forward. Use any of the methods you learned today. Use it to decode the 3 messages we've given you!
 
 
-```Java
+```java
 public class CaesarCipher {
 
     public static void main(String[] args) {
@@ -665,11 +665,4 @@ CaesarCipher.main(null);
     supercalifragilisticexpialidocious
     Edwin the g <3
     Me doing this without gpt. Why? Why did I do this?
-
-
-
-
-
-    Hola, como estas
-
 
