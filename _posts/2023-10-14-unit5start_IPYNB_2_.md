@@ -1,8 +1,5 @@
 ---
-toc: True
-comments: True
-layout: post
-title: Topics 5.1-5.3
+
 ---
 
 # 5.1 Anatomy of a Class
