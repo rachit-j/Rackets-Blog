@@ -4,7 +4,7 @@ title: Unit 9 Lesson
 description: A progressive journey through Java Inheritance
 courses: {'csa': {'week': 2}, 'labnotebook': {'week': 11}}
 categories: ['C4.0']
-type: hacks
+type: tangibles
 ---
 
 # 9.1 What is inheritance?
