@@ -24,12 +24,12 @@ Links: [ClickUp](https://app.clickup.com/t/86863rce8) | [Github Backend](https:/
 Description: By using a dynamic vercel backup, I was able to create a node server and deploy it on the backend while the rest of the Spring framework was still being created, which allowed me to deploy a side feature–the chatbot–earlier and get some features up and running. This feature was created off of AWS so my API key was not exposed (as this is a special API key, and other people have copied our repository on AWS many times). Note that this repository has also been forked by other people, so similarities may show up.
 
 #### 3) Neural Network
-Links: [ClickUp - Creation](https://app.clickup.com/t/8685rkj37) | [ClickUp - Connection](https://app.clickup.com/t/8685u06gc) | [Analysis Page](https://theoh32.github.io/Stocktify/analysis) | [Raw JavaScript For Development](newmdfilehere)
+Links: [ClickUp - Creation](https://app.clickup.com/t/8685rkj37) | [ClickUp - Connection](https://app.clickup.com/t/8685u06gc) | [Analysis Page](https://theoh32.github.io/Stocktify/analysis) | [Raw JavaScript For Development](/Rackets-Blog/tri1review-nnjs)
 
 Description: By using Object Oriented Javascript, I was able to program one of the main features of our project: our neural network analysis. I coded this network to have its own weight, biases, and neurons independently using different classes. Originally, this was in Java, but upon suggestion for ease of access, we moved this to a frontend embed. However, this is still very heavy on object oriented Javascript, and is one of the core features that our team's project has to offer.
 
 #### 4) Async Post/Get Request with Parser in Javascript
-Links: [Details](newmdfilehere)
+Links: [Details](/Rackets-Blog/tri1review-post)
 
 Description: Not really that big, but I had to make the Post and Get requests for our API and our Chatbot. Here, we ran into a lot of CORS errors, but we were able to slowly but surely overcome each and EVERY one (I am not joking I got every single HTTP error known to man). 
 
@@ -256,5 +256,10 @@ I don't really like to commit things until I'm done and it works on local, but e
 Note: Max number of commits/day is 22 (api not allowing testing from localhost)
 
 
-## [Individual Blog](/Rackets-Blog/labnotebook.md)
+## [Individual Review](/Rackets-Blog/labnotebook)
 
+## [CollegeBoard Quiz](newmdfilehere)
+
+## [Extra Credit for N@TM](newmdfilehere)
+
+## Reflection
