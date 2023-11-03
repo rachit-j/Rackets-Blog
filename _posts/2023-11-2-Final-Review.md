@@ -11,7 +11,7 @@ type: tangibles
 ## Monitoring Recap
 During our project, we keep track of important updates and log our structures with other important information through clickUp, our Scrum and information app!
 
-Major Tasks: ![Major Tasks](/images/major-tasks.png)
+Major Tasks: ![Major Tasks](/Rackets-Blog/images/major-tasks.png)
 
 #### 1) Project Proposal
 Links: [ClickUp](https://app.clickup.com/t/8685rkpkb) | [Proposal](https://theoh32.github.io/Stocktify/documentation/proposal)
@@ -252,9 +252,9 @@ A couple challenges that I faced include:
 
 #### Analytics
 I don't really like to commit things until I'm done and it works on local, but even then, I still think I was able to do a lot!
-![Analytics](/images/analytics.png)
+![Analytics](/Rackets-Blog/images/analytics.png)
 Note: Max number of commits/day is 22 (api not allowing testing from localhost)
 
 
-## [Individual Blog](/labnotebook.md)
+## [Individual Blog](/Rackets-Blog/labnotebook.md)
 
