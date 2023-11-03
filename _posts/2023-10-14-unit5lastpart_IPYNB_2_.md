@@ -1,8 +1,11 @@
 ---
+layout: post
+title: Unit 5 Part 3
 toc: True
 comments: True
-layout: post
-title: Topics 5.9-5.10
+description: Lesson for APCSA Unit 5
+courses: {'csa': {'week': 8}, 'labnotebook': {'week': 9}}
+type: tangibles
 ---
 
 ## 5.9 this Keyword

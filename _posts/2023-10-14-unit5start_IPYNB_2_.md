@@ -1,5 +1,11 @@
 ---
-
+layout: post
+title: Unit 5 Part 1
+toc: True
+comments: True
+description: Lesson for APCSA Unit 5
+courses: {'csa': {'week': 9}, 'labnotebook': {'week': 9}}
+type: tangibles
 ---
 
 # 5.1 Anatomy of a Class

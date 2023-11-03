@@ -4,8 +4,8 @@ comments: True
 layout: post
 title: Unit 1 Lesson
 description: the lesson for the unit 1
-permalink: /lesson
-courses: {'csa': {'week': '7'}}
+permalink: /unit1
+courses: {'csa': {'week': '7'}, 'labnotebook': {'week': 7}}
 type: hacks
 ---
 

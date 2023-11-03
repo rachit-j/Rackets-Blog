@@ -1,8 +1,11 @@
 ---
+layout: post
+title: Unit 5 Part 2
 toc: True
 comments: True
-layout: post
-title: Topics 5.4-5.8
+description: Lesson for APCSA Unit 5
+courses: {'csa': {'week': 9}, 'labnotebook': {'week': 9}}
+type: tangibles
 ---
 
 # Topic 5.4: Accessor Methods

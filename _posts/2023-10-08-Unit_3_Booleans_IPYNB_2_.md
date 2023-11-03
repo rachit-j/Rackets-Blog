@@ -4,7 +4,7 @@ comments: True
 layout: post
 title: Unit 3 Lesson
 type: tangibles
-courses: {'csa': {'week': 8}}
+courses: {'csa': {'week': 8}, 'labnotebook': {'week': 8}}
 ---
 
 # Lessons

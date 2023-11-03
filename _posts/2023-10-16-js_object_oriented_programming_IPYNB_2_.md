@@ -4,7 +4,7 @@ layout: post
 title: Javascript Object Oriented Programming
 description: Tech talk going over object oriented progamming in javascript
 type: ccc
-courses: {'csse': {'week': 9}, 'csp': {'week': 9}, 'csa': {'week': 11}}
+courses: {'csse': {'week': 9}, 'csp': {'week': 9}, 'csa': {'week': 11}, 'labnotebook': {'week': 11}}
 unit: 3
 ---
 

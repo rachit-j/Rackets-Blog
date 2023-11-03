@@ -4,7 +4,7 @@ title: Unit 4 Lesson
 toc: True
 comments: True
 description: Lesson for APCSA Unit 4
-courses: {'csa': {'week': 8}}
+courses: {'csa': {'week': 8}, 'labnotebook': {'week': 8}}
 type: tangibles
 ---
 
