@@ -83,7 +83,7 @@ Note: You can see in all my commits how I slowly go **insane**. I *love* that.
 
         trainAndPredict(num1, num2) {
             const data = [
-                [5000000, 150], // volume, price
+                [5000000, 150], // volume, price --> early on when I got this to work there wasn't as much data
                 [4500000, 120],
                 [5000, 20],
                 [6000, 15]
