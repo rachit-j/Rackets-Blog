@@ -10,8 +10,10 @@ type: tangibles
 
 
 ## Grades for all Units (out of 1)
-| Unit | Grade |
-| --- | --- | 
+
+
+| Unit      | Grade |
+| ----------- | ----------- |
 | 1 | 0.93 |
 | 2 | X |
 | 3 | 0.9 |
@@ -22,4 +24,3 @@ type: tangibles
 | 8 | _ |
 | 9 | _ |
 | 10 | _ |
-
