@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript For the Neural Network
+title: Collegeboard Quiz
 description: 
 toc: False
 permalink: /tri1review-cqz
