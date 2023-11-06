@@ -463,7 +463,7 @@ Test.main(null);
 
 
 ## 9.5 Creating References Using Inheritance Hierarchies
-Inheritance can be thought as an upside down tree with the ____ on the top and the ____ on the bottom. The ____ is the superclass while the ____ are the subclasses of this superclass. A visual representation of this tree is called a type diagram or hierarchy tree.
+Inheritance can be thought as an upside down tree with the parent on the top and the child on the bottom. The parent is the superclass while the children are the subclasses of this superclass. A visual representation of this tree is called a type diagram or hierarchy tree.
 
 A sample structure would be like:
 ```
@@ -479,7 +479,7 @@ public class I extends H
 ```
 ## Popcorn Hack
 - Draw a hierarchy tree for the above structure and add the picture here
-![Unit 8 Diagram](/images/Unit8Diagram.png)
+![Unit 8 Diagram](/Rackets-Blog/images/Unit8Diagram.png)
 
 This structure works as C not only inherits properties from B, but it also inherits properties from A. B is like C's parent and A is like C's grandparent. Think about it like real life, all families inherit something from their ancestors.
 
@@ -769,9 +769,9 @@ Book.main(null);
 
 
 ## Hacks
-- Popcorn Hacks (0.2): Participate in the discussion and fill in all of the blanks. 
-- MC Questions (0.1): Answer the 10 MC questions below with short explanations
-- FRQ Hacks (0.5): Make a complex FRQ that involves everything we taught. Be sure to have a sample solution along with scoring guidlines and how the solution is scored.
+- Popcorn Hacks (0.2): Participate in the discussion and fill in all of the blanks. ✔️
+- MC Questions (0.1): Answer the 10 MC questions below with short explanations ✔️
+- FRQ Hacks (0.5): Make a complex FRQ that involves everything we taught. Be sure to have a sample solution along with scoring guidlines and how the solution is scored. ✔️
 - Challenge (0.1): Make an example that uses everything we taught and it must run through main and uses input and output. Points will be awarded for complexity and creativity
 
 ### MC Questions
@@ -785,3 +785,797 @@ Book.main(null);
 <img src="https://github.com/Soham360/sturdy-fiesta/assets/111466950/d89dc7e4-563f-4547-a143-5374e8204527" alt="Question 8" width="50%">
 <img src="https://github.com/Soham360/sturdy-fiesta/assets/111466950/11743110-e043-466b-8a5b-5219607f6f30" alt="Question 9" width="50%">
 <img src="https://github.com/Soham360/sturdy-fiesta/assets/111466950/9792698d-167a-4ad6-9b88-b4c9254e0c72" alt="Question 10" width="50%">
+
+1. The Car object will be successfully assigned to the reference variable vehicle of type Vehicle. - This is an example of polymorphism where a subclass object can be referenced by a superclass reference variable.
+
+2. Cb = new B(); - This is not valid because the variable type C cannot reference an object of type B unless B is a subclass of C, which is not stated.
+
+3. The objects of Class G can be treated as objects of Class H and Class J. - Inheritance allows an object of a subclass to be treated as an object of any of its superclasses.
+
+4. C is a subclass of B. - Since Class D extends Class B and Class C extends Class D, Class C is indirectly a subclass of Class B through Class D.
+
+5. There will be a compile-time error. - Java does not allow a superclass object to be assigned to a subclass reference without an explicit cast, and even then, it would result in a runtime error if attempted.
+
+6. "J j = new J();", "J k = new K();", and "JI = new L();" - All are valid because a superclass reference can point to an object of any of its subclasses.
+
+7. Polymorphism - This principle allows objects of subclasses to be treated as objects of their superclass, enabling a single variable to hold objects of any subclasses.
+
+8. H is an indirect superclass of G. - Since G extends B which extends H, H is an indirect superclass of G.
+
+9. The root is the superclass, and the branches are the subclasses. - In an inheritance hierarchy represented as an upside-down tree, the root is the base class (superclass), and the branches represent derived classes (subclasses).
+
+10. The object will be successfully assigned to the reference variable - Java allows an object of a subclass to be assigned to a reference variable of a superclass type. This is a feature of polymorphism.
+
+#### FRQ: The Enchanted Forest
+##### Background:
+In the Enchanted Forest, there are n magical trees, each with a unique enchantment value. A group of wizards wants to perform a ritual that requires them to find a subset of these trees whose enchantment values sum up to a specific magical number M. However, the forest is vast, and the wizards need an efficient way to find the right combination of trees.
+
+##### Task:
+Write a program that will help the wizards find all possible combinations of trees that sum up to the magical number M. You must implement a recursive solution to solve this problem. Additionally, implement a sorting algorithm to sort the trees by their enchantment values before finding the combinations.
+
+##### Requirements:
+Implement a recursive method findCombinations that finds all combinations of trees that sum up to M.
+Implement a sorting method sortTrees to sort the trees by their enchantment values.
+Assume you have a Tree class that has an int enchantmentValue and other necessary attributes.
+Write a main method that tests your code with a sample array of Tree objects and a magical number M.
+
+##### Sample Solution
+
+
+```Java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+// Base class for all types of trees in the Enchanted Forest
+class MagicalTree {
+    private int enchantmentValue;
+
+    public MagicalTree(int value) {
+        enchantmentValue = value;
+    }
+
+    public int getEnchantmentValue() {
+        return enchantmentValue;
+    }
+
+    @Override
+    public String toString() {
+        return "MagicalTree with enchantment value: " + enchantmentValue;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        MagicalTree that = (MagicalTree) obj;
+        return enchantmentValue == that.enchantmentValue;
+    }
+}
+
+// A specific type of magical tree
+class EnchantedTree extends MagicalTree {
+    private String spell;
+
+    public EnchantedTree(int value, String spell) {
+        super(value);
+        this.spell = spell;
+    }
+
+    public String getSpell() {
+        return spell;
+    }
+
+    @Override
+    public String toString() {
+        return "EnchantedTree with enchantment value: " + getEnchantmentValue() + " and spell: " + spell;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) return false;
+        EnchantedTree that = (EnchantedTree) obj;
+        return spell.equals(that.spell);
+    }
+}
+
+public class EnchantedForest {
+
+    // Method to find all combinations of trees that sum up to M
+    public void findCombinations(List<MagicalTree> trees, int start, int M, List<MagicalTree> currentCombination, List<List<MagicalTree>> allCombinations) {
+        if (M == 0) {
+            allCombinations.add(new ArrayList<>(currentCombination));
+            return;
+        }
+        for (int i = start; i < trees.size(); i++) {
+            if (trees.get(i).getEnchantmentValue() <= M) {
+                currentCombination.add(trees.get(i));
+                findCombinations(trees, i + 1, M - trees.get(i).getEnchantmentValue(), currentCombination, allCombinations);
+                currentCombination.remove(currentCombination.size() - 1);
+            }
+        }
+    }
+
+    // Sorting method (using a simple selection sort for demonstration)
+    public void sortTrees(List<MagicalTree> trees) {
+        for (int i = 0; i < trees.size() - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < trees.size(); j++) {
+                if (trees.get(j).getEnchantmentValue() < trees.get(minIndex).getEnchantmentValue()) {
+                    minIndex = j;
+                }
+            }
+            MagicalTree temp = trees.get(minIndex);
+            trees.set(minIndex, trees.get(i));
+            trees.set(i, temp);
+        }
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        EnchantedForest forest = new EnchantedForest();
+        List<MagicalTree> trees = Arrays.asList(
+            new EnchantedTree(10, "Healing"),
+            new EnchantedTree(20, "Wisdom"),
+            new EnchantedTree(30, "Strength"),
+            new EnchantedTree(40, "Stealth"),
+            new EnchantedTree(50, "Magic")
+        );
+        int M = 60;
+        List<List<MagicalTree>> allCombinations = new ArrayList<>();
+        forest.sortTrees(trees);
+        forest.findCombinations(trees, 0, M, new ArrayList<>(), allCombinations);
+
+        // Output the combinations
+        for (List<MagicalTree> combination : allCombinations) {
+            for (MagicalTree tree : combination) {
+                System.out.println(tree + " ");
+            }
+        }
+    }
+}
+EnchantedForest.main(null);
+```
+
+    EnchantedTree with enchantment value: 10 and spell: Healing 
+    EnchantedTree with enchantment value: 20 and spell: Wisdom 
+    EnchantedTree with enchantment value: 30 and spell: Strength 
+    EnchantedTree with enchantment value: 10 and spell: Healing 
+    EnchantedTree with enchantment value: 50 and spell: Magic 
+    EnchantedTree with enchantment value: 20 and spell: Wisdom 
+    EnchantedTree with enchantment value: 40 and spell: Stealth 
+
+
+##### Scoring Guidelines
+Inheritance Structure (2 points)
+- 1 point for correctly defining the MagicalTree class with at least one property (e.g., enchantmentValue).
+- 1 point for correctly defining the EnchantedTree class that extends MagicalTree and adds a new property (e.g., spell).
+
+Method Overriding (2 points)
+- 1 point for correctly overriding the toString() method in the EnchantedTree class.
+- 1 point for correctly overriding the equals() method in the EnchantedTree class.
+
+Use of super Keyword (1 point)
+- 1 point for correctly using the super keyword in the constructors and/or in the overridden methods of the EnchantedTree class.
+
+Polymorphism (1 point)
+- 1 point for correctly demonstrating polymorphism by using MagicalTree references to store EnchantedTree objects and using these references in the findCombinations and sortTrees methods.
+
+Recursive Combination Finding (2 points)
+- 1 point for declaring the findCombinations method with the correct parameters and return type.
+- 1 point for implementing the recursive logic correctly within findCombinations.
+
+Sorting Algorithm Implementation (1 point)
+- 1 point for correctly implementing the sortTrees method to sort the trees based on their enchantment values.
+
+Main Method and Testing (1 point)
+- 1 point for writing a main method that initializes an array of EnchantedTree objects, calls the sortTrees and findCombinations methods, and prints out the results.
+
+Total: 10 points
+
+
+How the Solution is Scored:
+- Full credit is given for a correct implementation of inheritance, method overriding, use of the super keyword, demonstration of polymorphism, and correct recursive and sorting algorithm implementations.
+- Partial credit is given for partially correct implementations. For example, if the toString() method is overridden but does not include the spell property, half a point may be awarded.
+- No credit is given for sections that do not compile, do not follow the object-oriented programming requirements, or do not meet the specifications of the task.
+
+TELL ME I DONT WRITE LIKE COLLEGEBOARD I SWEAR ITS ALMOST EXACTLY LIKE THEM
+
+#### Challenge
+Added a cool simulation :D
+
+
+```Java
+import java.util.Scanner;
+
+// Base class for all types of trees
+class Tree {
+    private int age;
+
+    public Tree(int age) {
+        this.age = age;
+    }
+
+    public void grow() {
+        age++;
+        System.out.println("The tree grows taller. It is now " + age + " years old.");
+    }
+
+    public String toString() {
+        return "A majestic tree that is " + age + " years old.";
+    }
+}
+
+// Subclass of Tree
+class FruitTree extends Tree {
+    private String fruitType;
+
+    public FruitTree(int age, String fruitType) {
+        super(age);
+        this.fruitType = fruitType;
+    }
+
+    public void bearFruit() {
+        System.out.println("The tree bears delicious " + fruitType + ".");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " It bears " + fruitType + ".";
+    }
+}
+
+// Another subclass of Tree
+class MagicTree extends Tree {
+    private String magicPower;
+
+    public MagicTree(int age, String magicPower) {
+        super(age);
+        this.magicPower = magicPower;
+    }
+
+    public void castSpell() {
+        System.out.println("The tree casts a spell of " + magicPower + "!");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " It has the power of " + magicPower + ".";
+    }
+}
+
+// Creature that interacts with trees
+class Creature {
+    private String name;
+
+    public Creature(String name) {
+        this.name = name;
+    }
+
+    public void interactWithTree(Tree tree) {
+        System.out.println(name + " approaches the tree. " + tree.toString());
+        if (tree instanceof FruitTree) {
+            ((FruitTree) tree).bearFruit();
+        } else if (tree instanceof MagicTree) {
+            ((MagicTree) tree).castSpell();
+        } else {
+            tree.grow();
+        }
+    }
+}
+
+public class EcosystemSimulation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Ecosystem Simulation!");
+        System.out.print("Enter the age of a normal tree: ");
+        int treeAge = scanner.nextInt();
+        Tree tree = new Tree(treeAge);
+
+        System.out.print("Enter the age and type of fruit for a fruit tree (e.g., 5 apple): ");
+        int fruitTreeAge = scanner.nextInt();
+        String fruitType = scanner.next();
+        FruitTree fruitTree = new FruitTree(fruitTreeAge, fruitType);
+
+        System.out.print("Enter the age and magic power for a magic tree (e.g., 10 healing): ");
+        int magicTreeAge = scanner.nextInt();
+        String magicPower = scanner.next();
+        MagicTree magicTree = new MagicTree(magicTreeAge, magicPower);
+
+        Creature creature = new Creature("Wandering Elf");
+
+        System.out.println("\nSimulation begins...\n");
+        creature.interactWithTree(tree);
+        creature.interactWithTree(fruitTree);
+        creature.interactWithTree(magicTree);
+
+        scanner.close();
+    }
+}
+EcosystemSimulation.main(null);
+```
+
+    Welcome to the Ecosystem Simulation!
+    Enter the age of a normal tree: Enter the age and type of fruit for a fruit tree (e.g., 5 apple): Enter the age and magic power for a magic tree (e.g., 10 healing): 
+    Simulation begins...
+    
+    Wandering Elf approaches the tree. A majestic tree that is 10 years old.
+    The tree grows taller. It is now 11 years old.
+    Wandering Elf approaches the tree. A majestic tree that is 6 years old. It bears banana.
+    The tree bears delicious banana.
+    Wandering Elf approaches the tree. A majestic tree that is 10 years old. It has the power of power.
+    The tree casts a spell of power!
+
+
+#### Extra Stuff for the Hacks
+
+Check out my FTC Code: [Repo](https://github.com/lleosunn/pp-2022-2023) (btw we do it sometimes from the same computer so thats why I don't have many commits on that account for my git)
+
+Heres some code I wrote (look at the apriltags part)
+
+
+```Java
+package org.firstinspires.ftc.teamcode.auto;
+
+import com.arcrobotics.ftclib.controller.PIDController;
+import com.qualcomm.hardware.bosch.BNO055IMU;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.util.ElapsedTime;
+
+import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
+import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
+import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
+import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
+import org.firstinspires.ftc.teamcode.odometry;
+import org.firstinspires.ftc.teamcode.RobotHardware;
+
+import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
+import org.openftc.apriltag.AprilTagDetection;
+import org.openftc.easyopencv.OpenCvCamera;
+import org.openftc.easyopencv.OpenCvCameraFactory;
+import org.openftc.easyopencv.OpenCvCameraRotation;
+
+import java.util.ArrayList;
+
+@Autonomous
+public class RIGHThc extends LinearOpMode {
+
+    private PIDController movePID;
+    public static double p = 0.15, i = 0.5, d = 0.00000001; //0.15, 0.5, 8 0s 8
+
+    OpenCvCamera camera;
+    AprilTagDetectionPipeline aprilTagDetectionPipeline;
+
+    static final double FEET_PER_METER = 3.28084;
+
+    // Lens intrinsics
+    // UNITS ARE PIXELS
+    // NOTE: this calibration is for the C920 webcam at 800x448.
+    // You will need to do your own calibration for other configurations!
+    double fx = 578.272;
+    double fy = 578.272;
+    double cx = 402.145;
+    double cy = 221.506;
+
+    // UNITS ARE METERS
+    double tagsize = 0.508; //Double check!!
+
+    AprilTagDetection tagOfInterest = null;
+
+    private static double maxpowermove = 0.95;
+    private static double maxpowerstay = 0.6;
+
+    private ElapsedTime runtime = new ElapsedTime();
+    private DcMotor fl = null;
+    private DcMotor fr = null;
+    private DcMotor bl = null;
+    private DcMotor br = null;
+    private DcMotor lift1 = null;
+    private DcMotor lift2 = null;
+    private DcMotor arm = null;
+
+    Servo claw;
+    Servo wrist;
+    Servo guider;
+
+    DcMotor verticalLeft, verticalRight, horizontal;
+    BNO055IMU imu;
+    BNO055IMU.Parameters parameters;
+    Orientation lastAngles = new Orientation();
+    double globalAngle;
+
+    public void imuinit() {
+        imu = hardwareMap.get(BNO055IMU.class, "imu");
+        parameters = new BNO055IMU.Parameters();
+        parameters.mode = BNO055IMU.SensorMode.IMU;
+        parameters.angleUnit = BNO055IMU.AngleUnit.DEGREES;
+        parameters.accelUnit = BNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;
+        parameters.loggingEnabled = false;
+        imu.initialize(parameters);
+
+        telemetry.addData("Gyro Mode", "calibrating...");
+        telemetry.update();
+
+        while (!isStopRequested() && !imu.isGyroCalibrated()) {
+            sleep(50);
+            idle();
+        }
+        telemetry.addData("Gyro Mode", "ready");
+        telemetry.addData("imu calib status", imu.getCalibrationStatus().toString());
+        telemetry.update();
+    }
+
+    private void resetAngle() {
+        lastAngles = imu.getAngularOrientation(AxesReference.INTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);
+        globalAngle = 0;
+    }
+
+    private double getAngle() {
+        Orientation angles = imu.getAngularOrientation(AxesReference.INTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);
+        double deltaAngle = angles.firstAngle - lastAngles.firstAngle;
+        if (deltaAngle < -180)
+            deltaAngle += 360;
+        else if (deltaAngle > 180)
+            deltaAngle -= 360;
+        globalAngle += deltaAngle;
+        lastAngles = angles;
+        return globalAngle;
+    }
+
+    final double COUNTS_PER_INCH = 1860;
+
+    odometry update;
+
+    @Override
+    public void runOpMode() {
+
+        movePID = new PIDController(p, i, d);
+
+        fl = hardwareMap.get(DcMotor.class, "fl");
+        fr = hardwareMap.get(DcMotor.class, "fr");
+        bl = hardwareMap.get(DcMotor.class, "bl");
+        br = hardwareMap.get(DcMotor.class, "br");
+        lift1 = hardwareMap.get(DcMotor.class, "lift1");
+        lift2 = hardwareMap.get(DcMotor.class, "lift2");
+        arm = hardwareMap.get(DcMotor.class, "arm");
+
+        claw = hardwareMap.get(Servo.class, "claw");
+        wrist = hardwareMap.get(Servo.class, "wrist");
+        guider = hardwareMap.get(Servo.class, "guider");
+
+        //odometers
+        verticalLeft = hardwareMap.dcMotor.get("fl");
+        verticalRight = hardwareMap.dcMotor.get("br");
+        horizontal = hardwareMap.dcMotor.get("fr");
+
+        RobotHardware robot = new RobotHardware(fl, fr, bl, br, lift1, lift2, arm, claw, wrist, guider);
+        robot.innitHardwareMap();
+
+        imuinit();
+        sleep(500);
+        telemetry.addData(">", "Press Play to start op mode");
+        telemetry.addData("angle", getAngle());
+        telemetry.update();
+
+        //start of camera code
+        int cameraMonitorViewId = hardwareMap.appContext.getResources().getIdentifier("cameraMonitorViewId", "id", hardwareMap.appContext.getPackageName());
+        camera = OpenCvCameraFactory.getInstance().createWebcam(hardwareMap.get(WebcamName.class, "Webcam 1"), cameraMonitorViewId);
+        aprilTagDetectionPipeline = new org.firstinspires.ftc.teamcode.auto.AprilTagDetectionPipeline(tagsize, fx, fy, cx, cy);
+        camera.setPipeline(aprilTagDetectionPipeline);
+        camera.openCameraDeviceAsync(new OpenCvCamera.AsyncCameraOpenListener() {
+            @Override
+            public void onOpened() {
+                camera.startStreaming(800, 448, OpenCvCameraRotation.UPSIDE_DOWN);
+            }
+            @Override
+            public void onError(int errorCode) {
+            }
+        });
+        telemetry.setMsTransmissionInterval(50);
+        boolean tag1Found = false;
+        boolean tag2Found = false;
+        boolean tag3Found = false;
+
+        robot.clawClose();
+
+        while (!isStarted()) {
+            if(isStopRequested()) {
+                stop();
+            }
+            ArrayList<AprilTagDetection> currentDetections = aprilTagDetectionPipeline.getLatestDetections();
+            if (currentDetections.size() != 0) {
+                for (AprilTagDetection tag : currentDetections) {
+                    if (tag.id == 9) {
+                        tagOfInterest = tag;
+                        tag1Found = true;
+                        tag2Found = false;
+                        tag3Found = false;
+                        break;
+                    }
+                    if (tag.id == 11) {
+                        tagOfInterest = tag;
+                        tag2Found = true;
+                        tag1Found = false;
+                        tag3Found = false;
+                        break;
+                    }
+                    if (tag.id == 18) {
+                        tagOfInterest = tag;
+                        tag3Found = true;
+                        tag1Found = false;
+                        tag2Found = false;
+                        break;
+                    }
+                }
+                if (tag1Found) {
+                    telemetry.addLine("Tag 1 Located!");
+                    tagToTelemetry(tagOfInterest);
+                } else if (tag2Found) {
+                    telemetry.addLine("Tag 2 Located!");
+                    tagToTelemetry(tagOfInterest);
+                } else if (tag3Found) {
+                    telemetry.addLine("Tag 3 Located!");
+                    tagToTelemetry(tagOfInterest);
+                } else {
+                    telemetry.addLine("Don't see tag of interest :(");
+                    if (tagOfInterest == null) {
+                        telemetry.addLine("(The tag has never been seen)");
+                    } else {
+                        telemetry.addLine("\nBut we HAVE seen the tag before; last seen at:");
+                        tagToTelemetry(tagOfInterest);
+                    }
+                }
+
+            } else {
+                telemetry.addLine("Don't see tag of interest :(");
+                if (tagOfInterest == null) {
+                    telemetry.addLine("(The tag has never been seen)");
+                } else {
+                    telemetry.addLine("\nBut we HAVE seen the tag before; last seen at:");
+                    tagToTelemetry(tagOfInterest);
+                }
+            }
+
+            if (isStopRequested()) {
+                stop();
+            }
+
+            telemetry.update();
+            sleep(20);
+        }
+
+        waitForStart();
+        arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        lift1.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        lift2.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        //start odometry thread
+        update = new odometry(verticalLeft, verticalRight, horizontal, 10, imu);
+        Thread positionThread = new Thread(update);
+        positionThread.start();
+
+        int[] armHeight = {240, 160, 80, 0, 0};
+        double[] drift = {0.2, 0.4, 0.6, 0.8, 1};
+        resetRuntime();
+
+        //start of auto
+        robot.wristReset();
+        robot.setArm(630, 0.8);
+        moveTo(0, -50, 0, 45);
+        robot.wristTurn();
+        robot.setLift(1025, 1);
+        moveTo(0, -48, 0, 12);
+
+
+        //align with pole
+        robot.guiderSet();
+        runtime.reset();
+        while (runtime.seconds() < 0.8 && opModeIsActive()) {
+            stay(4.5, -55.5, 45);
+        }
+        runtime.reset();
+        while (runtime.seconds() < 0.5 && opModeIsActive()) {
+            robot.setLift(320, 0.5);
+            robot.setArm(680, 0.8);
+            robot.clawOpen();
+        }
+
+        //start of 5 cycles
+        for (int i = 0; i < 5; i++){
+            robot.guiderBack();
+            robot.clawOpen();
+            movetoalignwithconestack();
+            robot.setArm(5, 0.8);
+
+            runtime.reset();
+            while (runtime.seconds() < 0.2 && opModeIsActive()) {
+                stayatstack();
+            }
+            runtime.reset();
+            while (runtime.seconds() < 1.5 && opModeIsActive()) {
+                robot.wristReset();
+                stayatstack();
+            }
+
+            runtime.reset();
+            while (runtime.seconds() < 0.3 && opModeIsActive()) {
+                robot.clawClose();
+                stayatstack();
+            }
+
+            //lift cone to clear stack
+            while (lift1.getCurrentPosition() < 400) {
+                robot.setLift(1025, 1);
+            }
+            moveTo(-21, -49.5, 90, 3);
+
+            robot.setArm(630, 0.8);
+            robot.wristTurn();
+            robot.guiderSet();
+
+            movetopole();
+
+            runtime.reset();
+            while (runtime.seconds() < 1.4 && opModeIsActive()) {
+                alignwithpole();
+            }
+
+            runtime.reset();
+            while (runtime.seconds() < 0.5 && opModeIsActive()) {
+                alignwithpole();
+                robot.setLift(armHeight[i], 0.5);
+                robot.setArm(680, 0.8);
+                robot.clawOpen();
+            }
+
+        }
+
+        //parking
+        robot.guiderBack();
+        robot.setArm(300, 0.3);
+        moveTo(0, -50, 0, 3);
+        robot.wristReset();
+
+
+        if(tag1Found == true) {
+            moveTo(24, -51, 0, 0);
+        } else if(tag2Found == true) {
+            moveTo(0, -51, 0, 0);
+        } else if(tag3Found == true) {
+            moveTo(-24, -51, 0, 0);
+        } else {
+            moveTo(24, -51, 0, 0);
+        }
+
+        update.stop();
+        stop();
+    }
+
+    void tagToTelemetry(AprilTagDetection detection) {
+        telemetry.addLine(String.format("Detected tag ID=%d", detection.id));
+        telemetry.addLine(String.format("Translation X: %.2f feet", detection.pose.x * FEET_PER_METER));
+        telemetry.addLine(String.format("Translation Y: %.2f feet", detection.pose.y * FEET_PER_METER));
+        telemetry.addLine(String.format("Translation Z: %.2f feet", detection.pose.z * FEET_PER_METER));
+        telemetry.addLine(String.format("Rotation Yaw: %.2f degrees", Math.toDegrees(detection.pose.yaw)));
+        telemetry.addLine(String.format("Rotation Pitch: %.2f degrees", Math.toDegrees(detection.pose.pitch)));
+        telemetry.addLine(String.format("Rotation Roll: %.2f degrees", Math.toDegrees(detection.pose.roll)));
+    }
+
+
+
+    public void movetoalignwithconestack() {
+        moveTo(0, -50, 90, 6);
+    }
+
+    public void stayatstack() {stay (-26.25, -50.5, 90);}
+
+    public void movetopole() {
+        moveTo(-7.5, -50, 90, 8);
+    }
+
+    public void alignwithpole() {
+        stay(5, -54.5, 42);
+    }
+
+    public void moveTo(double targetX, double targetY, double targetOrientation, double error) {
+        double distanceX = targetX - (update.x() / COUNTS_PER_INCH);
+        double distanceY = targetY - (update.y() / COUNTS_PER_INCH);
+        double distance = Math.hypot(distanceX, distanceY);
+        while(opModeIsActive() && distance > error) {
+            distance = Math.hypot(distanceX, distanceY);
+            distanceX = targetX - (update.x() / COUNTS_PER_INCH);
+            distanceY = targetY - (update.y() / COUNTS_PER_INCH);
+
+            movePID.setPID(p, i, d);
+            double currentX = update.x() / COUNTS_PER_INCH;
+            double currentY = update.y() / COUNTS_PER_INCH;
+            double x = movePID.calculate(currentX, targetX);
+            double y = movePID.calculate(currentY, targetY);
+
+            double turn = 0.035 * (update.h() - targetOrientation);
+            double theta = Math.toRadians(update.h());
+            if (Math.abs(distanceX) < 1 || Math.abs(distanceY) < 1) {
+                movePID.reset();
+            }
+            if (x > maxpowermove) {
+                x = maxpowermove;
+            }
+            else if (x < -maxpowermove) {
+                x = -maxpowermove;
+            }
+            else x = x;
+            if (y > maxpowermove) {
+                y = maxpowermove;
+            }
+            else if (y < -maxpowermove) {
+                y = -maxpowermove;
+            }
+            else y = y;
+            if (turn > 0.3) {
+                turn = 0.3;
+            }
+            else if (turn < -0.3) {
+                turn = -0.3;
+            }
+            else turn = turn;
+            double l = y * Math.sin(theta + (Math.PI/4)) - x * Math.sin(theta - (Math.PI/4));
+            double r = y * Math.cos(theta + (Math.PI/4)) - x * Math.cos(theta - (Math.PI/4));
+            fl.setPower(l + turn);
+            fr.setPower(r - turn);
+            bl.setPower(r + turn);
+            br.setPower(l - turn);
+            if(isStopRequested()) {
+                update.stop();
+            }
+        }
+    }
+    public void stay(double targetX, double targetY, double targetOrientation) {
+        double distanceX = targetX - (update.x() / COUNTS_PER_INCH);
+        double distanceY = targetY - (update.y() / COUNTS_PER_INCH);
+        double x = 0.1 * distanceX;
+        double y = 0.1 * distanceY;
+        double turn = 0.035 * (update.h() - targetOrientation);
+        double theta = Math.toRadians(update.h());
+
+        if (x > maxpowerstay) {
+            x = maxpowerstay;
+        }
+        else if (x < -maxpowerstay) {
+            x = -maxpowerstay;
+        }
+        else x = x;
+        if (y > maxpowerstay) {
+            y = maxpowerstay;
+        }
+        else if (y < -maxpowerstay) {
+            y = -maxpowerstay;
+        }
+        else y = y;
+        if (turn > 0.3) {
+            turn = 0.3;
+        }
+        else if (turn < -0.3) {
+            turn = -0.3;
+        }
+        else turn = turn;
+
+        double l = y * Math.sin(theta + (Math.PI/4)) - x * Math.sin(theta - (Math.PI/4));
+        double r = y * Math.cos(theta + (Math.PI/4)) - x * Math.cos(theta - (Math.PI/4));
+
+        fl.setPower(l + turn);
+        fr.setPower(r - turn);
+        bl.setPower(r + turn);
+        br.setPower(l - turn);
+
+        if(isStopRequested()) {
+            update.stop();
+        }
+    }
+
+}
+
+
+```
