@@ -1,7 +1,7 @@
 ---
 toc: True
 comments: True
-layout: notebook
+layout: post
 title: UX - jQuery - CRUD Lesson
 description: The Bestest Baddest Coders lesson on UX and jQuery|CRUD
 courses: {'compsci': {'week': 17}}
