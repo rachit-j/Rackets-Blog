@@ -85,6 +85,7 @@ Typical Template Location:
 
 ```Java
 
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Title</title>
@@ -247,6 +248,7 @@ PopCorn Hack: explain what the following code below is doing:
 
 ```Java
 
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -325,6 +327,7 @@ This is like the design of the sign-in form, telling users what to fill in.
 
 
 ```Java
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -354,6 +357,7 @@ This is like the design of the sign-in form, telling users what to fill in.
 
 ```Java
 <!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layouts/base}" lang="en">
@@ -413,6 +417,7 @@ This is like the design of the sign-in form, telling users what to fill in.
 ```Java
 
 <!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layouts/base}" lang="en">
@@ -478,8 +483,8 @@ Create a Thymeleaf template to display when a 403 error occurs (Extra indicators
 
 # Hack Submissions
 Since aws is down, its really hard to display the hacks. Therefore, I'll be providing the github links:
-![403](https://github.com/rachit-j/ww3-backend/blob/master/src/main/resources/templates/error/403.html)
-![405](https://github.com/rachit-j/ww3-backend/blob/master/src/main/resources/templates/error/405.html)
+[403](https://github.com/rachit-j/ww3-backend/blob/master/src/main/resources/templates/error/403.html)
+[405](https://github.com/rachit-j/ww3-backend/blob/master/src/main/resources/templates/error/405.html)
 
 Model Function Commit:
-![https://github.com/rachit-j/ww3-backend/commit/387714234efdcaf46e79504da7d4ce8c53358e47](https://github.com/rachit-j/ww3-backend/commit/387714234efdcaf46e79504da7d4ce8c53358e47)
+[https://github.com/rachit-j/ww3-backend/commit/387714234efdcaf46e79504da7d4ce8c53358e47](https://github.com/rachit-j/ww3-backend/commit/387714234efdcaf46e79504da7d4ce8c53358e47)
