@@ -920,4 +920,4 @@ Replaced with PERIOD 1:
 - Take extra notes on this lesson that show deeper research into Collections and SQL.
 
 
-![HELP ME](Rackets-Blog/images/goofball.png)
+![HELP ME](/Rackets-Blog/images/goofball.png)

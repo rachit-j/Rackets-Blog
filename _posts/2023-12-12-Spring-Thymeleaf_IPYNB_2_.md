@@ -1,7 +1,7 @@
 ---
 toc: True
 comments: True
-layout: notebook
+layout: post
 title: Spring/Thymeleaf Lesson
 description: The Divorced Coders teaching Spring/Thymeleaf for Period 3 CSA
 courses: {'csa': {'week': 18}}
