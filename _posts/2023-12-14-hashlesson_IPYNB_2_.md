@@ -46,7 +46,7 @@ One object is used as a key (index) to another object (value). It can store diff
 
 
 
-```Java
+```java
 import java.util.HashMap; // import the HashMap class
 
 public class CreateHashMap{
@@ -76,7 +76,7 @@ CreateHashMap.main(null);
 # Methods in HashMap
 
 
-```Java
+```java
 
 import java.util.HashMap;
  
@@ -124,7 +124,7 @@ ExampleHashMap.main(null);
 Declare a Hashmap, and then research 5 different HashMap method which were not listed above and use them in your code just like the one above.
 
 
-```Java
+```java
 import java.util.HashMap;
 public class MyHashMap{
 public static void main(String[] args){
@@ -168,7 +168,7 @@ MyHashMap.main(null);
 In the code below, hash_map.entrySet() is used to return a set view of the mapped elements. Now, getValue() and getKey() functions, key-value pairs can be iterated.
 
 
-```Java
+```java
 import java.util.HashMap;
 public class TraverseHashMap{
 public static void main(String[] args){
@@ -200,7 +200,7 @@ TraverseHashMap.main(null);
 Try to find a different way to traverse a HashMap (Hint: try using a forEach function)
 
 
-```Java
+```java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -233,7 +233,7 @@ HashMapTraversal.main(null);
 # HashMaps in Java - Pet Registry Example 
 
 
-```Java
+```java
 public class Pet {
     private final String name;
     private final int age;
@@ -261,7 +261,7 @@ public class Pet {
 ```
 
 
-```Java
+```java
 public class PetsRegistry {
     
     private HashMap<String, Pet> petRegistry = new HashMap<>(); // declares a private HashMap instance variable petRegistry
@@ -332,7 +332,7 @@ PetsRegistry.main(null)
 # Popcorn HACK 3 (Shaurya)
 
 
-```Java
+```java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -429,7 +429,7 @@ An alternative for concurrent access is ConcurrentHashMap. It allows concurrent 
 A HashMap in Java is a fast and practical way to store and manage data using key-value pairs. It allows quick data retrieval, which is great for applications needing rapid access to information. However, its performance can suffer if the hash function isn't good or if used in multi-threaded environments without proper handling. Overall, HashMap is a popular choice in Java for its speed and ease of use in many programming scenarios.
 
 
-```Java
+```java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -546,7 +546,7 @@ In Java, the `Collection` interface is a member of the Java Collections Framewor
 
 
 
-```Java
+```java
 import java.util.*;
 
 public class Main {
@@ -569,7 +569,7 @@ In the context of SQL, collections refer to a group of related data items that c
 When working with databases in Java, you can use the `java.sql`` package. This package provides classes for connecting to a database and executing SQL queries.
 
 
-```Java
+```java
 import java.sql.*;
 import java.util.*;
 
@@ -613,7 +613,7 @@ Collections are useful in a database because they allow you to store multiple va
 Collections can be nested, creating a collection of collections, for more freeform control, such as representing a 2D map with a 2D array.
 
 
-```Java
+```java
 public class NestedArrays {
     public static void print2Darray(int[][] arr){
         // function for printing arrays
@@ -644,7 +644,7 @@ NestedArrays.main(null);
 Create a program that sums the columns and the rows of the given nested array (should all be 15), then create a copy of the original array by looping through the original array and assigning the values to a new array.
 
 
-```Java
+```java
 public class NestedArraysPopcorn {
     public static void print2Darray(int[][] arr) {
         // function for printing arrays
@@ -722,7 +722,7 @@ null values are placeholders that are implemented when there is not any value th
 Having null values in a collection will not immediately crash the program, however, it can cause a NullPointerException error if it is used carelessly. So it is important to learn how to identify and filter it.
 
 
-```Java
+```java
 import java.util.ArrayList;
 public class NullValuesInArray {
     public static void main(String[] args){
@@ -743,7 +743,7 @@ NullValuesInArray.main(null);//using null values in the main method
 The given array has certain values set to null, loop through to set all null values to 0, then sum every value in the array.
 
 
-```Java
+```java
 import java.util.ArrayList;
 
 public class NullValuesInArrayPopcorn {
@@ -804,7 +804,7 @@ In the context of an application or a database, a collection can allow for large
 In SQL, collections are powerful data types that allow us to store multiple values. Let's delve into declaring different types of collections.
 
 
-```Java
+```java
 -- Syntax for declaring an array
 DECLARE TYPE Array_Type IS VARRAY(5) OF VARCHAR2(50);
 
@@ -822,7 +822,7 @@ In SQL, we can declare different types of collections to store multiple values. 
 Now, let's initialize these collections using different methods.
 
 
-```Java
+```java
 -- Initializing an array
 DECLARE
   my_array Array_Type := Array_Type('Value1', 'Value2', 'Value3');
@@ -848,7 +848,7 @@ In the initialization phase, the array is populated with predefined values using
 Now, let's explore how to perform fundamental operations on collections.
 
 
-```Java
+```java
 -- Adding elements to an array
 my_array.EXTEND;
 my_array(4) := 'Value4';
@@ -868,7 +868,7 @@ In this sequence of operations, the array undergoes extension to accommodate a n
 Explore common operations like appending, deleting, and checking for element existence.
 
 
-```Java
+```java
 -- Appending elements to an array
 my_array := my_array MULTISET UNION Array_Type('Value5', 'Value6');
 
@@ -889,7 +889,7 @@ In the realm of SQL collections, various operations enhance their functionality.
 Now, let's leverage collections in SQL queries for more flexible and dynamic operations.
 
 
-```Java
+```java
 -- Using an array in a SELECT statement
 SELECT * FROM employees WHERE employee_id IN (SELECT * FROM TABLE(my_array));
 

@@ -83,7 +83,7 @@ Typical Template Location:
 ### example:
 
 
-```Java
+```java
 
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -107,7 +107,7 @@ You can also use *{...} for objects (known as the selection variable), #{...} fo
 ### example:
 
 
-```Java
+```java
 
 <p th:text="${user.name}">Default Name</p>
 <p th:text="${user.age}">Default Age</p>
@@ -123,7 +123,7 @@ You can also use *{...} for objects (known as the selection variable), #{...} fo
 - Thymeleaf is a framework within the backend spring set through the java controllers which ultimatley, allow you to develop html with attributes from the backend making for a more uer interactive base. All in All this means that Thymleaf is a way to get CRUD functionalities with a set of commands within the HTML.
 
 
-```Java
+```java
 // Here is a Set of Sample Backend Code you may want to run in a Spring in Jupyter Notebooks is giving you a Hard Time. 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -158,7 +158,7 @@ Answer Here: Model creates the user database itself. This allows for the informa
 # Examples With Thymeleaf Syntax in the Frontend. 
 
 
-```Java
+```java
 
 <!-- Define the document type and introduce the Thymeleaf namespace  ultimatley to allow thymeleaf commands-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -222,7 +222,7 @@ Answer Here: Model creates the user database itself. This allows for the informa
 PopCorn Hack: explain what the following code is doing:
 
 
-```Java
+```java
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -246,7 +246,7 @@ PopCorn Hack: explain what the following code below is doing:
 
 
 
-```Java
+```java
 
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -271,7 +271,7 @@ This HTML code, using Thymeleaf, displays content based on whether the isAdmin v
 # An example with Password and Security 
 
 
-```Java
+```java
 <div th:if="${password.length() < 8}">
     <p>Password must be at least 8 characters long.</p>
 </div>
@@ -287,7 +287,7 @@ This HTML code, using Thymeleaf, displays content based on whether the isAdmin v
 PopCorn Hack Explain What this is Doing:
 
 
-```Java
+```java
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -326,7 +326,7 @@ Creating a Thymeleaf template for the sign-in page is like designing the look of
 This is like the design of the sign-in form, telling users what to fill in.
 
 
-```Java
+```java
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -355,7 +355,7 @@ This is like the design of the sign-in form, telling users what to fill in.
 ## Comprehensive:
 
 
-```Java
+```java
 <!-- This page is illustrative and contains ideas about HTML formatting -->
 <!DOCTYPE HTML>
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
@@ -414,7 +414,7 @@ This is like the design of the sign-in form, telling users what to fill in.
 
 
 
-```Java
+```java
 
 <!-- This page is illustrative and contains ideas about HTML formatting -->
 <!DOCTYPE HTML>
@@ -485,6 +485,7 @@ Create a Thymeleaf template to display when a 403 error occurs (Extra indicators
 Since aws is down, its really hard to display the hacks. Therefore, I'll be providing the github links:
 [403](https://github.com/rachit-j/ww3-backend/blob/master/src/main/resources/templates/error/403.html)
 [405](https://github.com/rachit-j/ww3-backend/blob/master/src/main/resources/templates/error/405.html)
+![Error](/Rackets-Blog/images/error.png)
 
 Model Function Commit:
 [https://github.com/rachit-j/ww3-backend/commit/387714234efdcaf46e79504da7d4ce8c53358e47](https://github.com/rachit-j/ww3-backend/commit/387714234efdcaf46e79504da7d4ce8c53358e47)

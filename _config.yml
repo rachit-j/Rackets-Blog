@@ -3,10 +3,11 @@ description: "August 2023 to June 2024"
 owner_name: Rachit Jaiswal
 github_username: rachit-j
 baseurl: "/Rackets-Blog"
+remote_theme: jekyll/minima
 #remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
 # remote_theme: pages-themes/minimal@v0.2.0
-remote_theme: pages-themes/hacker@v0.2.0
+# remote_theme: pages-themes/hacker@v0.2.0
 # remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/time-machine@v0.2.0
 #remote_theme: pages-themes/cayman@v0.2.0
