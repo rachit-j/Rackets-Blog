@@ -24,6 +24,11 @@ type: hacks
 
 ## Key Assets
 
+### aigf
+Took down the deployment as too many of my friends were "looking into it"
+
+Basic Node server, but pretty cool. Fine tuning the model was fun.
+
 ### Stocktify
 
 [Bot Homepage](https://stocktifybot.vercel.app/)
