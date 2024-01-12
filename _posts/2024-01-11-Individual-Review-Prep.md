@@ -72,5 +72,7 @@ And a cheatsheet like the one I did for CSP. [Cheatsheet](1SIuw8PdpQErwUKMoKTv0U
 
 You know when you dont want to write 10 english essays. Yeah, I know. This is why I will be working on a bot that can write essays based off of student samples, and make it original enough to pass turnitin and other checking systems.
 
+Already working on this for a club tho soooooooooooooo maybe I want to get into gaming like the Legend of Zelda, because those games and their physics interest me.
+
 
 
