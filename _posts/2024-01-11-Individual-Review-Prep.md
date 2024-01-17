@@ -29,6 +29,9 @@ Took down the deployment as too many of my friends were "looking into it"
 
 Basic Node server, but pretty cool. Fine tuning the model was fun.
 
+[Link to Showcase for AIGF](https://github.com/rachit-j/aigf/issues/1)
+*All steps of the plan are still not complete D:*
+
 ### Stocktify
 
 [Bot Homepage](https://stocktifybot.vercel.app/)
@@ -41,10 +44,14 @@ Created a neural network that used a couple sample stocks to make predicitons, a
 
 Learned and Made APIs, managed them on the frontend.
 
+Learned somewhat how to deploy, courtesy of Theo! 
+
 Scrum Master: [Scrum for Stocktify](https://app.clickup.com/9011012769/v/l/4-90110133665-1)
 
 ### WW3
 **NOT** scrum master.
+
+Actually learned how to deploy and learned different kinds of sorting. 
 
 Backend Deployment, Fibonacci, and Sorting. [Review for WW3](https://github.com/rachit-j/ww3/issues/6)
 
@@ -52,8 +59,11 @@ Backend Deployment, Fibonacci, and Sorting. [Review for WW3](https://github.com/
 
 ### Quiz
 12AM: Ethan teaches me how to play brawl stars
+
 1AM: Revew java notes on W3Schools (quick reading): [W3 Schools](https://www.w3schools.com/java/default.asp)
+
 1:30AM: Start, cool lightning show!
+
 3AM: Done, did not do too well but I can improve: [Blog](https://rachit-j.github.io/Rackets-Blog/2023/12/22/2015-MCQ-Reflection.html)
 
 ### Plan for the actual test
