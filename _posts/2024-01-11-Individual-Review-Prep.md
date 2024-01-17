@@ -38,7 +38,7 @@ Basic Node server, but pretty cool. Fine tuning the model was fun.
 
 Designed the AI bot for stocktify that could be called as an external API
 
-[Neural Net Analysus](https://theoh32.github.io/Stocktify/analysis)
+[Neural Net Analysis](https://theoh32.github.io/Stocktify/analysis)
 
 Created a neural network that used a couple sample stocks to make predicitons, all written in Java first and then in JavaScript.
 
