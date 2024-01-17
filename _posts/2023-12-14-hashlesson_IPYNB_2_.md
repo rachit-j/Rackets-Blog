@@ -4,7 +4,7 @@ title: HashMap
 toc: True
 comments: True
 description: Lesson by Shaurya, James, and Shivansh
-courses: {'csa': {'week': 18}}
+courses: {'labnotebook': {'week': 18}}
 type: hacks
 ---
 

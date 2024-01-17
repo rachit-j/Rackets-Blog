@@ -3,7 +3,7 @@ comments: True
 layout: post
 title: P3-M Introduction to SASS
 description: Understanding the fundamental aspects of SASS
-courses: {'csa': {'week': 17}}
+courses: {'labnotebook': {'week': 17}}
 type: hacks
 ---
 
