@@ -59,7 +59,9 @@ Backend Deployment, Fibonacci, and Sorting. [Review for WW3](https://github.com/
 ### Plan for the actual test
 W3 Schools. Not even kidding. 
 
-And a cheatsheet like the one I did for CSP. [Cheatsheet](1SIuw8PdpQErwUKMoKTv0U7MF7XLb_o7PAzwlGjiFScw)
+And a cheatsheet like the one I did for CSP. [Cheatsheet](https://docs.google.com/document/d/1SIuw8PdpQErwUKMoKTv0U7MF7XLb_o7PAzwlGjiFScw/edit)
+
+*I am not kidding it took me a whole day to make this*
 
 ## Lab Notebook
 [Lab Notebook](https://rachit-j.github.io/Rackets-Blog/labnotebook)
