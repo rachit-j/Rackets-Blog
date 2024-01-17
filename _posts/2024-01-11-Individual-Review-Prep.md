@@ -55,6 +55,13 @@ Actually learned how to deploy and learned different kinds of sorting.
 
 Backend Deployment, Fibonacci, and Sorting. [Review for WW3](https://github.com/rachit-j/ww3/issues/6)
 
+## Commits
+
+![table1](/Rackets-Blog/images/Rev2T1_1.png)
+![table2](/Rackets-Blog/images/Rev2T1_2.png)
+![table3](/Rackets-Blog/images/Rev2T1_3.png)
+
+
 ## Collegeboard Prep
 
 ### Quiz
