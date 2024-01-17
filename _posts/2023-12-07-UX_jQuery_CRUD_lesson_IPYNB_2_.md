@@ -4,7 +4,7 @@ comments: True
 layout: post
 title: UX - jQuery - CRUD Lesson
 description: The Bestest Baddest Coders lesson on UX and jQuery|CRUD
-courses: {'labnotebook': {'week': 17}}
+courses: {'labnotebook': {'week': 15}}
 type: hacks
 authors: Colin Weis, Orlando Carcamo, Aniket Chakradeo, Mati Danish, Shreyas Sarurkar, Soham Kamat
 ---

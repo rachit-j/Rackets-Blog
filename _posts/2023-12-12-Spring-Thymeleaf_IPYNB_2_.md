@@ -4,7 +4,7 @@ comments: True
 layout: post
 title: Spring/Thymeleaf Lesson
 description: The Divorced Coders teaching Spring/Thymeleaf for Period 3 CSA
-courses: {'labnotebook': {'week': 18}}
+courses: {'labnotebook': {'week': 16}}
 type: hacks
 authors: Aditya Nawandhar, Akshat Parikh, Krishiv Mahendru, Parav Salaniwal, Raymond Sheng, Rohin Sood
 ---
