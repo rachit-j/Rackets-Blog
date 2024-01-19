@@ -17,17 +17,17 @@ authors: Rachit Jaiswal
 **Luna Iwazaki** - Design manager and frontend developer, project visualizer.
 **Tanisha Patil** - Backend developer, design manager
 **Theo Huntlas** - Backend developer, deployment
-**Justin ______** - ________
+**Justin N** - Backend developer, deployment
 
 ## Ideation
 Our team decided to create a platform that allows our users–high school students studying for their classes–to learn their material in a fun, engaging way, while also having quick cram resources, such as topic generated cheat sheets and calculators, as well as practice tests to help kids succeed. 
 
-We call it [tag:a32fh].
+We call it bookNook.
 
 We hope to get a mix of the something like popular game [Prodigy](https://www.prodigygame.com/main-en/) while also incorporating the usefulness of [Fiveable](https://fiveable.me/), however, we are going to head on a completely different path with these projects and try to incorporate something more modern and with better resources, UI, applicability, and tools for our students.
 
 ## Courses
-We plan to have a set amount of courses in [tag:a32fh], with the option and framework to add more courses based on demand. Here is our set of starter courses, and the ones we may include if our project finishes earlier than expected.
+We plan to have a set amount of courses in bookNook, with the option and framework to add more courses based on demand. Here is our set of starter courses, and the ones we may include if our project finishes earlier than expected.
 
 Starter Courses (priority ranked):
 - AP CSA
@@ -49,7 +49,7 @@ We built and designed a couple of wireframes for what we want the whole site to 
 
 Our pre game interface will look something like this, with an access point and statistics to show how students are doing (in the future, maybe we can plan on giving teachers access to this). We also have other basic features like updates, which is our board of posts; register, our sign up/in page; our cram page, with resources like study guides powered by AI, as well as AI generated and answered questions (will use GPT-4 since it is better and Rachit has keys) through an API. The analyze page will be discussed in the next section.
 
-![Wireframe 1](link to wireframe)
+![Wireframe 1](https://rackets-assets.vercel.app/assets/2tprojectwire1.png)
 
 Our game will be designed as a retro game (to save our programmers) and will be using pixelated sprites. It will include basic trading and AI generated conversations from a *very cool* question bank that will be explained in a later section. 
 
@@ -247,12 +247,17 @@ Although our team has been working a lot on our ideation, we have developed some
 
 Our team has been working to deploy a chatbot, a new one. Since text-davinci and other easier to use, older models were shut down, we had to learn a new framework for our serverside bot. We chose to go with Next.js since it is supported by OpenAI, instead of Node, which we used last time (it is basically the same thing since Next is built off of Node and they are really similar). 
 
+As of now, posts from this site are not working... we are working on fixing this. However, we have postman testing to make sure our bot works.
+
 <label for="prompt">Enter your prompt:</label><br>
 <input type="text" id="prompt" name="prompt" value="hello"><br>
-<button onclick="sendPrompt()">Send Prompt</button>
+<button id="sendButton">Send Prompt</button>
 <p><strong>Response:</strong></p>
 <p id="response"></p>
 <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById('sendButton').addEventListener('click', sendPrompt);
+    });
     async function sendPrompt() {
         const promptText = document.getElementById('prompt').value;
         const responseContainer = document.getElementById('response');
@@ -262,9 +267,8 @@ Our team has been working to deploy a chatbot, a new one. Since text-davinci and
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ prompt: promptText })
-                signal: signal,
-                mode: 'cors' // Add this line to enable CORS
+                body: JSON.stringify({ prompt: promptText }),
+                mode: 'cors' // This line enables CORS
             });
             const data = await response.json();
             responseContainer.textContent = data.text;
@@ -275,3 +279,25 @@ Our team has been working to deploy a chatbot, a new one. Since text-davinci and
 </script>
 
 
+![Postman Bot Testing](https://rackets-assets.vercel.app/assets/2tprojectbotpostman.png)
+
+### Frontend/Backend Setup
+
+The frontend and the backend for our project are in the process of being set up. After the deployment lesson (which Rachit, Tanisha, and Luna are presenting), the backend will be deployed, and the frontend will be deployed to Github Pages even earlier. For now, they are both being set up, with our members using pull and merge requests to contribute to code, just like in the real world. This way, we are able to analyze and check each other's code before we merge it into the main branch, which will help us stop problems being put into main. 
+
+![Justin YEAHHH](https://rackets-assets.vercel.app/assets/justin_tesing_pull.png)
+
+![GOING INSANE](https://rackets-assets.vercel.app/assets/rachit_testing_pull_1.png)
+
+![GOING EVEN MORE INSANE](https://rackets-assets.vercel.app/assets/rachit_testing_pull_2.png)
+
+## Diagrams for Finalized Plan
+
+![Look at this](https://rackets-assets.vercel.app/assets/2tprojcleandiagram.png)
+
+<details>
+    <summary>Connected boxes for Diagram Under Here. CAUTION</summary>
+
+![Not this](https://rackets-assets.vercel.app/assets/2tprojuncleandiagram.png)
+
+</details>
