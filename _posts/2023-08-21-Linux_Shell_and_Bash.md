@@ -8,6 +8,7 @@ type: plans
 courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0} }
 categories: [C1.4]
 ---
+
 ### Jupyter Notebook
 To access the notebook, click [here]()
 ### Hack #1: Tool Script
