@@ -24,7 +24,7 @@ c. Create a Book class that represents the following attributes about a book: ti
 
 
 
-```Java
+```java
 public class Book {
     private String title;
     private String author;
@@ -113,7 +113,7 @@ Implement the following mutator (setter) methods for the BankAccount class:
 Ensure that the balance is never negative.
 
 
-```Java
+```java
 public class BankAccount {
     private String accountHolder;
     private double balance;
@@ -184,7 +184,7 @@ Within a constructor, generally the attributes of the class are initialized with
 (b) Create an example of an overloaded constructor within a class. You must use at least three variables. Include the correct initialization of variables and correct headers for the constructor. Then, run the constructor at least twice with different variables and demonstrate that these two objects called different constructors. 
 
 
-```Java
+```java
 public class Vehicle {
     private String make;
     private String model;
@@ -267,7 +267,7 @@ setTemperature(double value): A method that sets a new temperature value in Cels
 toFahrenheit(): A method that converts the temperature from Celsius to Fahrenheit and returns the result as a double value. 
 
 
-```Java
+```java
 public class Temperature {
     private double celsius;
 
@@ -322,7 +322,7 @@ You need to implement a Java class hierarchy to represent different types of ani
 
 
 
-```Java
+```java
 // Superclass representing a general animal
 class Animal {
     protected String name;
