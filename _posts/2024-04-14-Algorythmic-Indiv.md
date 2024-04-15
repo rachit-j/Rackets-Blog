@@ -34,3 +34,5 @@ I also loved our TikToks, which really helped to spread our performance. The peo
 We were praised for having legible numbers and clearly describing our sort, as well as maintaining a degree of humor and fun with our setting and scenario. 
 
 Working to determine the positioning was also a challenge, but we spent some time together and were able to figure it out. 
+
+![image](https://github.com/Codemaxxers/triangleblogs/assets/56803677/1cebdc91-6375-47d8-bbe2-d87be8e7ffb5)
